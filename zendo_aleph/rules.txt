@@ -1,0 +1,12 @@
+zendo(A) :-
+   piece(A,B), size(B,2), red(B).
+zendo(A) :-
+   piece(A,B), size(B,0), strange(B).
+zendo(A) :-
+   piece(A,B), coord2(B,2), upright(B).
+zendo(A) :-
+   piece(A,B), coord2(B,0), green(B).
+zendo(A) :-
+   piece(A,B), coord1(B,0), green(B).
+zendo(6).
+zendo(12).

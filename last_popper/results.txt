@@ -1,0 +1,15 @@
+14:12:17 Generating programs of size: 5
+14:12:17 ********************
+14:12:17 New best hypothesis:
+14:12:17 tp:137 fn:0 tn:51 fp:0 size:13
+14:12:17 rlast(V0,V1):- tail(V0,V2),tail(V2,V3),head(V3,V1).
+14:12:17 rlast(V0,V1):- head(V0,V1),tail(V0,V2),empty_list(V2,V3).
+14:12:17 rlast(V0,V1):- tail(V0,V2),head(V2,V1),tail(V2,V4),empty_list(V4,V3).
+14:12:17 ********************
+14:12:17 Generating programs of size: 6
+14:12:17 Generating programs of size: 7
+********** SOLUTION **********
+Precision:1.00 Recall:1.00 TP:137 FN:0 TN:51 FP:0 Size:7
+rlast(V0,V1):- head(V0,V1),tail(V0,V3),empty_list(V3,V2).
+rlast(V0,V1):- tail(V0,V2),rlast(V2,V1).
+******************************

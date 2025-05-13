@@ -1,0 +1,29 @@
+popper result
+
+********** SOLUTION **********
+Precision:1.00 Recall:1.00 TP:20 FN:0 TN:20 FP:0 Size:6
+zendo(V0):- small(V3),piece(V0,V1),size(V1,V3),contact(V1,V2),red(V2).
+******************************
+
+
+aleph result
+
+[theory]
+
+[Rule 1] [Pos cover = 20 Neg cover = 1]
+zendo(A) :-
+   piece(A,B), contact(B,C), red(B).
+
+[Training set performance]
+          Actual
+        +          -  
+     + 20         1         21 
+Pred 
+     -  0         19        19 
+
+       20        20        40 
+
+Accuracy = 0.975
+[Training set summary] [[20,1,0,19]]
+[time taken] [0.009108602000000188]
+[total clauses constructed] [34]

@@ -1,0 +1,23 @@
+13:23:41 New best hypothesis:
+13:23:41 tp:130 fn:45 tn:110 fp:0 size:15
+13:23:41 rsum(V0,V1):- nothing(V0,V1).
+13:23:41 rsum(V0,V1):- tail(V0,V2),tail(V2,V3),head(V3,V1).
+13:23:41 rsum(V0,V1):- head(V0,V1),tail(V0,V2),nothing(V2,V3).
+13:23:41 rsum(V0,V1):- tail(V0,V4),head(V0,V3),head(V4,V2),add(V3,V2,V1).
+13:23:41 ********************
+13:23:41 Generating programs of size: 6
+13:23:42 ********************
+13:23:42 New best hypothesis:
+13:23:42 tp:148 fn:27 tn:110 fp:0 size:23
+13:23:42 rsum(V0,V1):- nothing(V0,V1).
+13:23:42 rsum(V0,V1):- head(V0,V1),tail(V0,V2),nothing(V2,V3).
+13:23:42 rsum(V0,V1):- tail(V0,V4),head(V0,V3),head(V4,V2),add(V3,V2,V1).
+13:23:42 rsum(V0,V1):- head(V0,V2),tail(V0,V4),tail(V4,V3),head(V3,V5),add(V2,V5,V1).
+13:23:42 rsum(V0,V1):- tail(V0,V4),tail(V4,V3),head(V4,V5),head(V3,V2),add(V5,V2,V1).
+13:23:42 ********************
+13:23:42 Generating programs of size: 7
+********** SOLUTION **********
+Precision:1.00 Recall:1.00 TP:175 FN:0 TN:110 FP:0 Size:7
+rsum(V0,V1):- nothing(V0,V1).
+rsum(V0,V1):- tail(V0,V3),head(V0,V2),rsum(V3,V4),add(V4,V2,V1).
+******************************

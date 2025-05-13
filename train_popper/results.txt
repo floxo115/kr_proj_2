@@ -1,0 +1,20 @@
+learned by aleph
+
+[Rule 1] [Pos cover = 5 Neg cover = 0]
+eastbound(A) :-
+   has_car(A,B), short(B), closed(B).
+
+[Training set performance]
+          Actual
+        +          -  
+     +  5          0          5  
+Pred 
+     -  0          5          5  
+
+        5          5         10 
+
+learned by popper
+
+********** SOLUTION **********
+Precision:1.00 Recall:1.00 TP:5 FN:0 TN:5 FP:0 Size:4
+eastbound(V0):- has_car(V0,V1),closed(V1),short(V1).
