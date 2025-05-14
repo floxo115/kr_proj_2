@@ -1,14 +1,3 @@
-
-:- set(minpos,20).
-
-:- modeh(1, illegal(+int, +int, +int, +int, +int, +int)).
-:- modeb(*, lt(+int, -int)).
-:- modeb(*, adj(+int, -int)).
-
-:- determination(illegal/6,adj/2).
-:- determination(illegal/6,lt/2).
-
-
 % <(R/C, R/C)
 lt(0,1).
 lt(0,2).
