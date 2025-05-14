@@ -1,0 +1,19 @@
+[theory]
+
+[Rule 21] [Pos cover = 1145 Neg cover = 0]
+illegal(A,B,C,D,E,F) :-
+   adj(F,B), adj(E,A).
+
+[Training set performance]
+             Actual
+         +            -   
+     +  3240           0           3240  
+Pred 
+     -   0           6760          6760  
+
+        3240          6760         10000 
+
+Accuracy = 1
+[Training set summary] [[3240,0,0,6760]]
+[time taken] [17.370771524000006]
+[total clauses constructed] [23229]
