@@ -10,20 +10,36 @@ aleph result
 
 [theory]
 
-[Rule 1] [Pos cover = 20 Neg cover = 1]
+[Rule 1] [Pos cover = 8 Neg cover = 0]
 zendo(A) :-
-   piece(A,B), contact(B,C), red(B).
+   piece(A,B), contact(B,C), size(C,2).
+
+[Rule 2] [Pos cover = 4 Neg cover = 0]
+zendo(A) :-
+   piece(A,B), contact(B,C), size(C,3).
+
+[Rule 3] [Pos cover = 5 Neg cover = 0]
+zendo(A) :-
+   piece(A,B), coord2(B,9), lhs(B).
+
+[Rule 4] [Pos cover = 3 Neg cover = 0]
+zendo(A) :-
+   piece(A,B), coord1(B,0), green(B).
+
+[Rule 5] [Pos cover = 5 Neg cover = 0]
+zendo(A) :-
+   piece(A,B), size(B,0), strange(B).
 
 [Training set performance]
           Actual
         +          -  
-     + 20         1         21 
+     + 19         0         19 
 Pred 
-     -  0         19        19 
+     -  1         20        21 
 
        20        20        40 
 
 Accuracy = 0.975
-[Training set summary] [[20,1,0,19]]
-[time taken] [0.009108602000000188]
-[total clauses constructed] [34]
+[Training set summary] [[19,0,1,20]]
+[time taken] [0.028792077]
+[total clauses constructed] [609]

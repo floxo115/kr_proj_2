@@ -1,8 +1,74 @@
 [theory]
 
-[Rule 21] [Pos cover = 1145 Neg cover = 0]
+[Rule 2] [Pos cover = 148 Neg cover = 0]
+illegal(A,B,C,C,D,E) :-
+   adj(D,A), adj(B,E).
+
+[Rule 3] [Pos cover = 67 Neg cover = 0]
+illegal(A,B,C,B,D,B) :-
+   adj(C,E), lt(A,E), lt(A,D).
+
+[Rule 4] [Pos cover = 549 Neg cover = 0]
+illegal(A,B,C,D,E,D) :-
+   lt(D,B).
+
+[Rule 5] [Pos cover = 114 Neg cover = 0]
+illegal(A,B,C,A,C,D) :-
+   lt(A,E), lt(E,F), lt(F,G).
+
+[Rule 6] [Pos cover = 50 Neg cover = 0]
+illegal(A,B,C,D,B,B) :-
+   adj(B,A).
+
+[Rule 7] [Pos cover = 84 Neg cover = 0]
+illegal(A,B,C,D,C,C) :-
+   lt(C,A).
+
+[Rule 9] [Pos cover = 514 Neg cover = 0]
+illegal(A,B,C,D,E,D) :-
+   lt(B,D).
+
+[Rule 10] [Pos cover = 59 Neg cover = 0]
+illegal(A,B,C,D,C,A) :-
+   lt(A,C).
+
+[Rule 12] [Pos cover = 65 Neg cover = 0]
+illegal(A,B,C,D,C,A) :-
+   lt(C,A).
+
+[Rule 13] [Pos cover = 40 Neg cover = 0]
+illegal(A,B,A,C,A,D) :-
+   adj(C,E), lt(B,E), lt(B,D).
+
+[Rule 14] [Pos cover = 525 Neg cover = 0]
+illegal(A,B,C,D,C,E) :-
+   lt(C,A).
+
+[Rule 16] [Pos cover = 61 Neg cover = 0]
+illegal(A,A,B,C,D,A) :-
+   adj(D,A).
+
+[Rule 18] [Pos cover = 524 Neg cover = 0]
+illegal(A,B,C,D,C,E) :-
+   lt(A,C).
+
+[Rule 19] [Pos cover = 1145 Neg cover = 0]
 illegal(A,B,C,D,E,F) :-
-   adj(F,B), adj(E,A).
+   adj(E,A), adj(B,F).
+
+[Rule 20] [Pos cover = 28 Neg cover = 0]
+illegal(A,B,A,B,B,C).
+
+[Rule 21] [Pos cover = 165 Neg cover = 0]
+illegal(A,B,A,B,C,D).
+
+[Rule 22] [Pos cover = 49 Neg cover = 0]
+illegal(A,B,C,B,D,B) :-
+   lt(D,A), lt(C,A).
+
+[Rule 23] [Pos cover = 32 Neg cover = 0]
+illegal(A,B,A,C,A,D) :-
+   lt(D,B), lt(C,B).
 
 [Training set performance]
              Actual
@@ -15,5 +81,9 @@ Pred
 
 Accuracy = 1
 [Training set summary] [[3240,0,0,6760]]
-[time taken] [17.370771524000006]
-[total clauses constructed] [23229]
+[time taken] [7.04530946]
+[total clauses constructed] [32582]
+
+ Testing on testfiles...
+Covers 3361 of 3361 positive examples!
+Covers 2 of 6639 negative examples!

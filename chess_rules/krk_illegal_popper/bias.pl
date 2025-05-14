@@ -18,6 +18,6 @@ type(lt, (int, int)).
 type(adj, (int, int)).
 
 direction(illegal, (in, in, in, in, in, in)).
-direction(lt, (in, in)).
-direction(adj, (in, in)).
+direction(lt, (in, out)).
+direction(adj, (in, out)).
 

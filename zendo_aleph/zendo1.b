@@ -51,7 +51,8 @@
 % direction(strange,(in,)).
 
 :- set(i, 15).
-:- set(noise, 2).
+
+:- set(minpos,2).
 
 
 :- modeh(1, zendo(+state)).
