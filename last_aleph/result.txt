@@ -1,0 +1,22 @@
+[theory]
+
+[Rule 1] [Pos cover = 14 Neg cover = 0]
+rlast(A,B) :-
+   head(A,B), tail(A,C), empty_list(C).
+
+[Rule 2] [Pos cover = 127 Neg cover = 0]
+rlast(A,B) :-
+   tail(A,C), rlast(C,B).
+
+[Training set performance]
+           Actual
+        +          -  
+     + 141         0         141 
+Pred 
+     -  0          60          60  
+
+       141         60         201 
+
+Accuracy = 1
+[Training set summary] [[141,0,0,60]]
+[time taken] [0.0030702390000000024]
